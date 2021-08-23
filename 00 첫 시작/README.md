@@ -3,9 +3,7 @@
 ## 개발 환경 설정
 
 - [Python 설치](#python-설치)
-- [Python project set up in VSCode](#python-project-set-up-in-vscode)
 - [Python project set up in Pycharm](#python-project-set-up-in-pycharm)
-- [conda 가상환경 설치하기](#conda-가상환경-설치하기)
 
 <br>
 
@@ -16,43 +14,9 @@
 - _*Python과 pip을 설치하는 방법 외에는 Window OS와 설치 방법은 같습니다..*_
 
 - [python 설치 for Window OS](https://www.python.org/)
-
-### MAC - 공식 사이트에서 다운
-
-1. [python 설치](https://www.python.org/)
-
-2. MacOS 같은 경우 기본적으로 python 2.7 버전이 내장되어 있다. 따라서 설치 후에 별칭을 붙여주어야 한다.
-
-3. `$ vi ~/.zshrc`으로 설정 파일을 열고 `i`로 편집이 가능하도록 한 후에 맨 아래에 다음 명령어 두 줄을 추가한다.
-   - `alias python=python3`
-   - `alias pip=pip3`
-
-4. `:!wq`으로 저장하고 나간다.
-
-5. 터미널을 껏다가 다시 연다.
-
-### MAC - homebrew 사용
-
-1. homebrew 설치
-
-   - [homebrew 공식 사이트에서 설치](https://brew.sh/index_ko)
-   - homebrew 명령어 정리
-     - `$ brew -v` : brew 버전을 알 수 있다.
-     - `$ brew update` : brew 설치
-
 <br>
 
-2. python 설치
-
-   1. `$ brew install python3`
-
-   2. `$ python3` : 설치된 파이썬 명령 쉘을 실행한다.
-      - 설치 확인
-      - `exit()`으로 나올 수 있다.
-
-<br>
-
-3. pip 설치 (윈도우는 python을 다운받아 설치할 떄 이미 설치되어 있습니다.)
+1. pip 설치
 
    1. `$ sudo easy_install pip` : pip을 설치한다.
    2. `$ pip --version` : 설치된 pip 버전을 확인할 수 있다.
@@ -68,7 +32,7 @@
 
 <br>
 
-4. 가상환경 설치 (conda, pipenv, venv중 하나 선택)
+2. 가상환경 설치 (conda, pipenv, venv중 하나 선택)
 
    - [venv 사용하기](https://docs.python.org/ko/3/library/venv.html)
 
@@ -114,44 +78,8 @@
 
 <br>
 
-- [Python project set up in VSCode](#python-project-set-up-in-vscode)
 - [Python project set up in Pycharm](#python-project-set-up-in-pycharm)
 
-## Python project set up in VSCode
-
-7. vs-code에서 interpreter & linter 선택 & 설치
-
-   1. 생성한 `my_project` 폴더를 vs-code에서 연다.
-   2. `shift + command + p` --> `python : select interpreter` --> 생성한 가상환경 선택
-   3. `shift + command + p` --> `python : select linter` --> flake8 선택&설치
-
-   - linter은 작성한 코드에 에러가 생길 부분을 미리 감지한다.
-   - 해당 폴더에 .vscode 폴더가 생성된 것을 확인할 수 있다.
-
-<br>
-
-8. formatter-black : - 코드를 보기좋게 format해준다
-
-   - pipenv 사용
-     - `$ pipenv install black --dev --pre`
-   - conda 사용, venv 사용
-     - `$ pip install -U black`
-
-<br>
-
-9. .vscode안에 settings.json파일을 다음과 같이 수정한다.
-
-   ```
-   {
-   "python.linting.pylintEnabled": false,
-   "python.linting.flake8Enabled": true,
-   "python.linting.enabled": true,
-   "python.formatting.provider": "black",
-   "python.linting.flake8Args": ["--max-line-length=88"]
-   }
-   ```
-
-<br>
 
 ## Python project set up in Pycharm
 
